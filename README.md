@@ -35,4 +35,5 @@ You can find some predefined steps [here](https://github.com/calabash/calabash-a
 
 If you just want to play around with your view and query / check different elements, the console comes in very handy. From within your
 Android project you can run `calabash-android console ./bin/CalabashTest.apk` to start the console. Use the start_test_server_in_background
-command to launch your app in the running emulator. And then you can use the Ruby API functions here. Use `query("button")` to get started.
+command to launch your app in the running emulator. And then you can use the Ruby API functions here. Use `query("button")` to get started. 
+Check out [this tutorial](http://blog.lesspainful.com/2012/12/18/Android-Query/) on the query function.

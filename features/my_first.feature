@@ -24,6 +24,15 @@ Feature: Calabash Testing
   	Then I wait
   	Then I toggle checkbox number 1
   	Then I should see text containing "not checked"
+  	
+  Scenario: Radio button toggle
+  	When I select "Africa" radio button
+  	Then "Africa" radio button should be selected
+  	Then I select "America" radio button
+  	Then "America" radio button should be selected
+  	Then "Africa" radio button should not be selected
+  	
+  	
   	 
    
   

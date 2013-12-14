@@ -26,3 +26,5 @@ proguard/
 /test_servers/
 
 /.DS_Store
+
+/.irb-history
