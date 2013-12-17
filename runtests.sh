@@ -16,7 +16,7 @@ do
     echo "Launching tests on DEVICE: $DEVICE"
     OUTPUT_PATH="testoutput/$DEVICE"
     mkdir -p $OUTPUT_PATH
-    SCREENSHOT_PATH="$OUTPUT_PATH/" ADB_DEVICE_ARG=$DEVICE calabash-android run $APK_PATH --format json --out "$OUTPUT_PATH/output.json" &
+    RESET_BETWEEN_SCENARIOS=1 SCREENSHOT_PATH="$OUTPUT_PATH/" ADB_DEVICE_ARG=$DEVICE calabash-android run $APK_PATH --format json --out "$OUTPUT_PATH/output.json" &
   fi
 done
 
