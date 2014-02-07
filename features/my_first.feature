@@ -4,6 +4,18 @@ Feature: Calabash Testing
     When I press the "Click me" button
     Then I see the text "Hello World!"
 
+  @check
+  Scenario: Radio button toggle
+    When I scroll down
+    # to close the keyboard (so it shows the button on small screens)
+    Then I go back
+    Then I select "Africa" radio button
+    Then "Africa" radio button should be selected
+    Then I select "America" radio button
+    Then "America" radio button should be selected
+    Then "Africa" radio button should not be selected
+
+
   Scenario: Going to next screen and back
   	When I enter "Something" into input field number 1
   	Then I press the "See details" button
@@ -20,19 +32,14 @@ Feature: Calabash Testing
 
   Scenario: Checking the checkboxes
   	When I toggle checkbox number 1
+    # for the small (3 inch) screens
+    Then I scroll up
   	Then I should see text containing "checked now"
   	Then I wait
   	Then I toggle checkbox number 1
+    # for the small (3 inch) screens
+    Then I scroll up
   	Then I should see text containing "not checked"
-
-  @check
-  Scenario: Radio button toggle
-  	When I scroll down
-  	Then I select "Africa" radio button
-  	Then "Africa" radio button should be selected
-  	Then I select "America" radio button
-  	Then "America" radio button should be selected
-  	Then "Africa" radio button should not be selected
 
 
 
